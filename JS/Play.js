@@ -4,7 +4,7 @@ import { outsideGrid } from './grid.js'
 
 let lastRenderTime = 0
 let gameOver = false
-const gameBoard = document.getElementById('game-board')
+const display = document.getElementById('display')
 
 function main(currentTime) {
   if (gameOver) {
@@ -36,8 +36,8 @@ function update() {
 
 function draw() {
   gameBoard.innerHTML = ''
-  drawSnake(gameBoard)
-  drawFood(gameBoard)
+  drawSnake(display)
+  drawFood(display)
 }
 
 function checkDeath() {
